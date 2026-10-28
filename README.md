@@ -1,11 +1,26 @@
 # adam-links
 
+![version](https://img.shields.io/badge/version-1.0.0-3f5a00) ![status](https://img.shields.io/badge/status-live-c8f04a) ![author](https://img.shields.io/badge/by-Adam--Blf-15160f)
+
 Personal link-in-bio page for the Instagram account `@_adam_blf`, served at
 https://links.beloucif.com.
 
 - Single static `index.html`, no build step, no JavaScript, no cookies, no analytics.
 - Font: Geologica (OFL), self-hosted in `fonts/` (no CDN).
-- Hosting: Vercel, project `adam-links`. DNS: CNAME `links` to `cname.vercel-dns.com` at OVH.
+- Light and dark themes from the system preference.
+
+## Architecture
+
+```mermaid
+flowchart LR
+  IG[Instagram bio link] --> DNS[links.beloucif.com<br/>CNAME at OVH]
+  DNS --> V[Vercel static hosting]
+  V --> P[index.html + fonts/]
+  P --> L1[adam.beloucif.com]
+  P --> L2[LinkedIn]
+  P --> L3[GitHub]
+  P --> L4[YouTube]
+```
 
 ## Legal
 
@@ -18,3 +33,5 @@ Adding a form, analytics or a third-party embed reopens that question.
 ```bash
 vercel deploy --prod
 ```
+
+Releases are tagged `vX.Y.Z` from `CHANGELOG.md`.

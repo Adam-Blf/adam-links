@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adam Beloucif</title>
+<meta name="description" content="Adam Beloucif, Data Engineer. Projets, parcours, code et vidéos.">
+<meta name="theme-color" content="#0e0f0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+<link rel="preload" href="/fonts/geologica-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c8f04a'/%3E%3Ctext x='32' y='43' font-family='sans-serif' font-weight='700' font-size='30' text-anchor='middle' fill='%230e0f0c'%3EAB%3C/text%3E%3C/svg%3E">
+<style>
+@font-face {
+  font-family: "Geologica";
+  src: url("/fonts/geologica-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+:root {
+  --bg: #f4f1ea;
+  --ink: #15160f;
+  --muted: #55574c;
+  --card: #ffffff;
+  --line: #d9d5c8;
+  --accent: #3f5a00;
+  --accent-ink: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e0f0c;
+    --ink: #f1f0ea;
+    --muted: #a9aa9f;
+    --card: #181a14;
+    --line: #2c2e26;
+    --accent: #c8f04a;
+    --accent-ink: #0e0f0c;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e0f0c;
+  --ink: #f1f0ea;
+  --muted: #a9aa9f;
+  --card: #181a14;
+  --line: #2c2e26;
+  --accent: #c8f04a;
+  --accent-ink: #0e0f0c;
+}
+* { box-sizing: border-box; margin: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Geologica", system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 16px 32px;
+}
+main { width: 100%; max-width: 440px; }
+.badge {
+  width: 72px; height: 72px; border-radius: 22px;
+  background: var(--accent); color: var(--accent-ink);
+  display: grid; place-items: center;
+  font-weight: 700; font-size: 28px; letter-spacing: -0.02em;
+}
+h1 { margin-top: 24px; font-size: 32px; font-weight: 650; letter-spacing: -0.03em; line-height: 1.1; }
+.role { margin-top: 6px; font-size: 17px; font-weight: 450; color: var(--accent); }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .role { color: var(--accent); } }
+.school { margin-top: 12px; font-size: 15px; line-height: 1.5; color: var(--muted); font-weight: 350; }
+nav { margin-top: 36px; display: grid; gap: 12px; }
+nav a {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--ink); text-decoration: none;
+  transition: transform .18s ease, border-color .18s ease;
+}
+nav a:hover { transform: translateY(-2px); border-color: var(--accent); }
+nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+nav a:active { transform: scale(.98); }
+.label { font-size: 17px; font-weight: 550; letter-spacing: -0.01em; }
+.sub { display: block; margin-top: 2px; font-size: 13px; font-weight: 350; color: var(--muted); }
+.arrow { font-size: 18px; color: var(--accent); flex-shrink: 0; }
+footer { margin-top: auto; padding-top: 48px; width: 100%; max-width: 440px; font-size: 12px; line-height: 1.5; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { nav a { transition: none; } nav a:hover { transform: none; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="badge" aria-hidden="true">AB</div>
+  <h1>Adam Beloucif</h1>
+  <p class="role">Data Engineer, data &amp; IA</p>
+  <p class="school">EFREI x ISIT, Université Paris-Panthéon-Assas</p>
+  <nav aria-label="Liens">
+    <a href="https://adam.beloucif.com" rel="noopener">
+      <span><span class="label">Voir mes projets</span><span class="sub">adam.beloucif.com</span></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+    <a href="https://www.linkedin.com/in/adambeloucif/" rel="noopener">
+      <span><span class="label">Lire mon parcours</span><span class="sub">LinkedIn</span></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+    <a href="https://github.com/Adam-Blf" rel="noopener">
+      <span><span class="label">Explorer mon code</span><span class="sub">GitHub</span></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+    <a href="https://www.youtube.com/@Adam_Blf" rel="noopener">
+      <span><span class="label">Regarder mes vidéos</span><span class="sub">YouTube</span></span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+  </nav>
+</main>
+<footer>
+  <p id="mentions">Site personnel non professionnel. Hébergeur : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.</p>
+</footer>
+</body>
+</html>

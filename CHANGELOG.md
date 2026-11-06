@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- README badges block, coloured Mermaid architecture and licence section.
+- MIT licence for the code, `VERSION` file and tag-driven release workflow.
+
 ## 1.1.0 - 2026-10-28
 
 - Editorial redesign: Newsreader display serif with Geologica, arched portrait, numbered table of contents, colophon.
